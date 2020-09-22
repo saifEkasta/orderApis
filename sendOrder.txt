@@ -1,0 +1,2 @@
+{"id":"id","invoice_number":1,"status":"Completed/Canceled","total":0,"order_type":"delivery/take_away/dine_in","created_on":"2018-12-10T13:45:00.000Z","outlet_id":"123","items":[{"item_id":"product id","name":"name of product","price":0,"is_prepared":true,"add_ons":[{"id":"add on id","name":"Add on Name","price":0}]}]}
+ 
