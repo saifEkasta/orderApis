@@ -4,11 +4,14 @@ var orderRoute = require('./orderRoute');
 
 module.exports = function(app){	
 
-	// app.use('/orders',orderRoute)/;
-	app.post('/makeOrder',OrderController.makeOrder); 
-
-	app.post('/createCatalog',OrderController.createCatalog);
-	app.post('/sendOrder',OrderController.sendOrder);
-	app.post('/syncInventory',OrderController.syncInventory);
+	app.use('/orders',orderRoute);
+	orderRoute.get('/tes',function(req,res){
+		res.send('yes tested');
+	})
+	orderRoute.post('/makeOrder',OrderController.makeOrder); 
+	app.get('/test',OrderController.test);
+	orderRoute.post('/createCatalog',OrderController.createCatalog);
+	orderRoute.post('/sendOrder',OrderController.sendOrder);
+	orderRoute.post('/syncInventory',OrderController.syncInventory);
 
 }
